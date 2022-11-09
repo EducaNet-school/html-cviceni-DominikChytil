@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>První tabulky</title>
+    <style>
+        td, tr, table {border: 2px solid blue;}
+        caption {font-size: xx-large; font-weight: bolder; color: blue; padding: 15px;}
+        
+    </style>
+</head>
+<body>
+    <table cellspacing="15" cellpadding="20">
+        <caption>Studenti EducaNet</caption>
+        <colgroup>
+        <col style="background-color:rgb(86, 193, 255);">
+        <col span="2" style="background-color: aqua;">
+    </colgroup>
+    <thead style="background-color: darkgray;">
+        <tr>
+            <td>Jméno</td>
+            <td>Příjmení</td>
+            <td>Věk</td>
+        </tr>
+        </thead>
+        <tr>
+            <td>Karel</td>
+            <td>Dopita</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Jana</td>
+            <td>Novotná</td>
+            <td>25</td>
+        </tr>
+        <tfoot style="background-color: darkgrey; text-align:center">
+        <tr>
+            <td colspan="3"> Zápatí</td>
+        </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
