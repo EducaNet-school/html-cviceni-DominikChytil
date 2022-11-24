@@ -3,3 +3,50 @@ h1 {
     background-color: burlywood;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+h2 {
+    text-align:center;
+    background-color:lightcoral;
+}
+h2 {
+    text-align: center;
+    background-color: burlywood;
+    font-size: large;
+}
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    background-color:lightgray;
+}
+.strong{
+font-weight: 600;
+}
+td, tr, table, th{
+    border: 3px solid rgb(156, 156, 156);
+    border-collapse: collapse;
+    font-weight:50px;
+}
+td{
+padding: 5px 20vw 5px 10px;
+}
+table{
+margin-top: 50px;
+}
+.jídla{
+padding-right: 10vw;
+}
+.dny{
+font-size: 20px;
+padding: 20px 20px 20px 20px;
+font-weight: 600;
+border: 2px solid rgb(255, 255, 255);
+border-radius: 50px;
+}
+.podnadpis{
+font-weight: 600;
+font-size: 18px;
+}
+.cena{
+position: absolute;
+right: 45%;
+}
