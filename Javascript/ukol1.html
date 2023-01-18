@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Ahoj!</h1>
+
+    <script>alert("Ahoj!")
+    
+        var jmeno = prompt("Zadejte svoje jméno:");
+        alert("Zdravím Vás "+jmeno+"!");
+   
+        var cislo = prompt("Zadejte číslo, které chcete umocnit:");
+        var mocnina = prompt("Zadejte mocninu:"); 
+        var vysledek = Math.pow(cislo, mocnina);
+        alert("Vysledek je "+vysledek);
+   
+        var text = prompt("Zadejte text:");
+        var delka = text.length;
+        for(var i=1; i<=delka; i++) {
+            var cast = text.substr(0, i);
+            alert(cast);
+        }
+    
+  let num1 = prompt("Zadejte první číslo");
+  let num2 = prompt("Zadejte druhé číslo");
+  let num3 = prompt("Zadejte třetí číslo");
+ 
+  let min = Math.min(num1, num2, num3);
+ 
+  alert("Vaše nejmenší zadané číslo je: " + min);
+</script>
+
+<h1>Šikulka, prošel jste. Vítejte na mém webu</h1>
+</body>
+</html>
