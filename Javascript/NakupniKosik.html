@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nákupní košík</title>
+</head>
+<body>
+    <h1>Nákupní košík</h1>
+            <p>Nákupní položka:</p>
+            <input type="text" id="polozka">
+            <button onclick="nakup()">Potvrď</button>
+            <p>Váš nákup:</p>
+            <p id="nakup"></p>
+            <p id="polozky"></p>
+    <script>
+var nakup = new Array()
+var i = 0
+function nakup()
+{
+
+    nakup[i] = document.getElementById("polozka").value;
+    document.getElementById("nakup").innerHTML = nakup;
+    if(i < 5){
+        document.getElementById("polozky").innerHTML = "To ještě unesu";
+    } else if(i >= 5 && i <= 9){
+        document.getElementById("polozky").innerHTML = "Pro takový nákup asi zajedu autem";
+    } else if(i > 9 ){
+        document.getElementById("polozky").innerHTML = "Toho je moc, to radši nakoupím přes internet";
+    }
+    document.getElementById("polozka").value = null
+    i++
+}
+    </script>
+</body>
+</html>
