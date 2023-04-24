@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#picture {
+    position:relative;
+    transition:transform 0,5s;
+}
+    .center {
+        margin:auto;
+        width:60%;
+        padding:100px;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <img src="https://www.postavy.cz/foto/burak-foto.jpg" id="picture">
+    </div>
+
+<script>
+    var picture = document.getElementById("picture");
+
+    picture.addEventListener("mouseenter",function() {
+    picture.style.transform = "scale(1.5)";
+    });
+
+    picture.addEventListener("mouseleave",function() {
+    picture.style.transform = "scale(1)";
+    });
+</script>
+
+</body>
+</html>

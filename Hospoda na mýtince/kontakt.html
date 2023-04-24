@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Hospoda na mýtince</title>
+    <style>
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color:black;
+  font-size:large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+}
+
+
+header {
+  background-color: burlywood;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+form {
+  border: 2px solid #ccc;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+input[type="submit"] {
+  background-color: green;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+  <a href="index2.html">Hlavní stránka</a>
+  <a href="jidelnilistek.html"> Jídelní lístek</a>
+  <a href="DenniMenu.html">Denní menu</a>
+  <a href="Listovani/index.html"> Listovaní</a>
+    <header>
+        <h1>Hospoda na mýtince</h1>
+      </header>
+      <h3>Kontaktní formulář</h4>
+
+      <form>
+        <label for="name">Jméno a příjmení:</label>
+        <input type="text" id="name" name="name" required placeholder="Zadejte jméno"><br><br>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required placeholder="Zadejte email"><br><br>
+        
+        <label for="phone">Telefon:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Zadejte telefonní číslo"><br><br>
+        
+        <label for="rc">Rodné číslo:</label>
+        <input type="text" id="rc" name="rc" required placeholder="Zadejte rodné číslo"><br><br>
+        
+        <label for="message">Zpráva:</label>
+        <textarea id="message" name="message" required placeholder="Vaše zpráva"></textarea><br><br>
+        
+        <input type="submit" value="Odeslat">
+      </form>
+
+    <script>
+      function validateForm() {
+        let name = document.forms[0]["name"].value;
+        let email = document.forms[0]["email"].value;
+        let phone = document.forms[0]["phone"].value;
+        let rc = document.forms[0]["rc"].value;
+
+        if (name == "" || email == "" || phone == "" || rc == "") {
+          alert("Všechna pole jsou povinná.");
+          return false;
+        }
+
+        if (!isValidRc(rc)) {
+          alert("Neplatné rodné číslo.");
+          return false;
+        }
+
+        if (!isValidPhone(phone)) {
+          alert("Zadejte platný telefonní číslo");
+          return false;
+        }
+
+        if (!isValidEmail(email)) {
+          alert("Zadejte platný email")
+          return false;
+        }
+      return true
+      }
+
+      function isValidRc(rc) {
+        let rcRegex = /^[0-9]{6}\/?[0-9]{3}$/;  
+        return rcRegex.test(rc);
+      }
+
+      function isValidPhone(phone) {
+        let phoneRegex = /^\d{9}$/;
+        return phoneRegex.test(phone);
+      }
+
+      function isValidEmail(email) {
+        let emailRegex = /^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/;
+        return emailRegex.test(email);
+      }
+    </script>
+  </body>
+</html>
+
+
+</body>
+</html>

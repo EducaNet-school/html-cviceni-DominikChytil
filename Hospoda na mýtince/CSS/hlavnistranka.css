@@ -2,6 +2,14 @@ h1 {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+a{
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 5s0px;
+}
 .background {
     background-image: url(Obrázek/pozadí2.jpeg); 
 }
@@ -74,4 +82,8 @@ div.gallery {
   div.desc {
     padding: 10px;
     text-align:center;
+  }
+
+  a:visited {
+      background-color: white;
   }

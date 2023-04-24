@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 ondblclick="alert('Toto je událost doubleclick')">Klikni na mě dvakrát</h1>
+    <input type="text" id="myInput">
+    <div id="vystup">
+        Stisknuto:
+    </div>
+
+    <!--<div id="myDiv">
+        Najeď na mě myší uuu
+    </div> -->
+
+    <script>
+//document.getElementById("myDiv").addEventListener("mouseover", function() {document.write("AAAAAAAAAAAA"); });
+let result = document.getElementById("vystup");
+document.getElementById("myInput").addEventListener("keydown",
+function(event)
+{ 
+    result.innerText += event.key.toUpperCase();
+} 
+);
+    </script>
+</body>
+</html>
